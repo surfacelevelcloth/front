@@ -17,7 +17,9 @@ const Options = ({ options, variants: { nodes } }: any) => {
   }
 
   useEffect(() => {
-    const variant = nodes.find((node) => node.title === color + " / " + size)!
+    const variant = nodes.find(
+      (node: any) => node.title === color + " / " + size
+    )!
 
     setVariant(variant)
   }, [color, size])
@@ -31,9 +33,9 @@ const Options = ({ options, variants: { nodes } }: any) => {
         height={200}
       />
 
-      {options.map(({ name, values }) => (
+      {options.map(({ name, values }: any) => (
         <div key={name}>
-          {values.map((value) => (
+          {values.map((value: any) => (
             <button
               key={value}
               className={`border-2 border-solid border-black rounded-xl ${

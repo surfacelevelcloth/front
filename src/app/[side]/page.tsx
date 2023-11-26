@@ -17,7 +17,7 @@ const Side = async ({ params: { side } }: any) => {
     <>
       <h1>{side}</h1>
 
-      {nodes.map((node) => {
+      {nodes.map((node: any) => {
         return (
           <div className="m-10 bg-slate-300 p-5" key={node.handle}>
             <Image
